@@ -1,0 +1,918 @@
+/* General Styles */
+
+body {
+    font-family: 'Noah Grotesque', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    /* Or use fixed for a permanent top position */
+    top: 0;
+    /* Ensure the header sticks at the top */
+    z-index: 1000;
+    /* Keep the header above other elements */
+    background-color: white;
+    /* Optional: Set a background color to prevent overlap issues */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow for better visibility */
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Make sure the header stays above the nav bar */
+    z-index: 1000;
+}
+
+/* Navigation Menu */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: #0ac1e0;
+    font-weight: bold;
+}
+
+/* Mobile Hamburger Icon */
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop navigation menu */
+    #main-nav ul {
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* Open below the header */
+        left: 0;
+        width: 100%;
+        /* Full width for mobile */
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 0px;
+    }
+
+    #main-nav ul.active {
+        display: flex;
+        /* Show menu when active */
+    }
+
+    #main-nav ul li {
+        text-align: center;
+        padding: 0px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger menu for mobile */
+    }
+
+    /* Align Hamburger Menu and Language Dropdown */
+    .d-flex.align-items-center {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-select {
+        width: auto;
+        font-size: 14px;
+    }
+}
+
+/* Header Section - Desktop */
+
+header {
+    padding: 20px 0;
+    /* Increased padding for a larger header */
+}
+
+/* Logo */
+
+header .logo img {
+    max-height: 80px;
+    /* Increase logo size */
+}
+
+/* Mobile Header Layout */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        /* Add spacing below logo */
+    }
+
+    nav {
+        margin-bottom: 10px;
+        /* Add spacing below navigation */
+    }
+
+    .form-select {
+        width: 100%;
+    }
+}
+
+/* Change color on hover */
+
+.nav-link:hover {
+    color: #0ac1e0 !important;
+    text-decoration: none;
+    /* Optional: Remove underline on hover */
+    font-weight: bold;
+}
+
+/* Full-width image for desktop */
+
+.home img {
+    width: 100%;
+    height: auto;
+}
+
+/* Change color on active (clicked) */
+
+.nav-link:active {
+    color: #0ac1e0 !important;
+}
+
+/* Change color when focused (keyboard navigation or programmatically focused) */
+
+.nav-link:focus {
+    color: #0ac1e0 !important;
+    font-weight: bold !important;
+}
+
+/* Logo Section */
+
+.text-center img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.text-center p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #d5f1f1;
+    /* Light blue background */
+    color: #000000;
+    /* Black text color */
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Contact Us Section - Mobile */
+
+@media (max-width: 768px) {
+    #contact .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        /* Add spacing between addresses */
+    }
+
+    #contact p {
+        font-size: 16px;
+        /* Increase font size for better readability */
+        margin-bottom: 5px;
+    }
+
+    #contact a {
+        font-size: 16px;
+    }
+}
+
+/* Contact Section - Mobile */
+
+@media (max-width: 768px) {
+    #contact .col-md-6:nth-child(2) {
+        order: 2;
+        /* Move the second address to the bottom */
+    }
+
+    #contact .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        /* Add spacing between addresses */
+    }
+
+    #contact p {
+        font-size: 16px;
+        /* Increase font size for better readability */
+        margin-bottom: 5px;
+    }
+
+    #contact a {
+        font-size: 16px;
+    }
+}
+
+/* Header Logo - Larger Size */
+
+header .logo img {
+    max-height: 100px;
+    /* Increase logo size for desktop */
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        max-height: 80px;
+        /* Increase logo size for mobile */
+    }
+}
+
+/* Add gap between image and text in the About 360++ section */
+
+#about .row {
+    gap: 20px;
+    /* Add spacing between image and text */
+}
+
+/* Contact Us Section - Mobile Adjustments */
+
+@media (max-width: 768px) {
+    #contact .d-flex {
+        flex-direction: column;
+        /* Stack addresses vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    #contact .d-flex>div {
+        margin-bottom: 20px;
+        /* Add spacing between the addresses */
+    }
+}
+
+/* About 360++ Section - Desktop Layout */
+
+#about .row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Increase gap between image and text */
+}
+
+#about .col-md-6 {
+    flex: 1;
+    /* Ensure both columns take equal space */
+}
+
+/* About 360++ Section - Mobile Layout */
+
+@media (max-width: 768px) {
+    #about .row {
+        flex-direction: column;
+        /* Stack image and text vertically on smaller screens */
+        gap: 20px;
+        /* Reduce gap for mobile */
+    }
+
+    #about .col-md-6 {
+        width: 100%;
+        /* Full width for mobile */
+    }
+}
+
+/* About 360++ Section - General Layout */
+
+#about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    /* Ensure a consistent gap between image and text */
+}
+
+#about .col-md-6 {
+    flex: 1;
+    /* Ensure columns share equal space */
+    min-width: 300px;
+    /* Prevent columns from shrinking too much */
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* Keep rounded corners for the image */
+}
+
+/* About 360++ Section - Mobile Adjustments */
+
+@media (max-width: 768px) {
+    #about .row {
+        flex-direction: column;
+        /* Stack image and text vertically */
+    }
+
+    #about .col-md-6 {
+        width: 100%;
+        /* Full-width for mobile view */
+        text-align: center;
+        /* Center align text on smaller screens */
+    }
+}
+
+/* Center navigation menu for mobile */
+
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
+
+.logo {
+    width: 150px;
+    /* Adjust the width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+/* Apply black color to all navigation links */
+
+.nav-link {
+    color: black !important;
+    font-size: var(--bs-nav-link-font-size);
+}
+
+/* Footer Section - Right Align Copyright Text for Desktop */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d5f1f1;
+    /* Light blue background */
+    color: #000;
+    /* Black text color */
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-family: 'Noah Grotesque', sans-serif;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #000;
+    text-decoration: underline;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Mobile View - Adjust Layout */
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.our-team-section {
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.team-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.our-team-section h1 {
+    font-size: 116px;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: -0.04em;
+    color: #212529;
+    margin-bottom: 40px;
+}
+
+.our-team-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.team-slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.team-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.team-slide {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    /* Rounded images */
+}
+
+.team-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* Ensure image stays rounded */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-slide:hover img {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+.team-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark overlay */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    /* Hide the overlay initially */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-slide:hover .team-details {
+    transform: translateY(0);
+    /* Slide up on hover */
+}
+
+.team-details h3 {
+    font-size: 16px;
+}
+
+.team-details p {
+    font-size: 14px;
+}
+
+/* Arrow Buttons */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.our-team-sectionMob {
+    display: none;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .team-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .team-details h3 {
+        font-size: 14px;
+    }
+
+    .team-details p {
+        font-size: 12px;
+    }
+
+    .our-team-section h1 {
+        font-size: 60px;
+    }
+}
+
+/* Small devices */
+
+@media (max-width: 580px) {
+    .our-team-sectionMob h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .our-team-sectionMob {
+        display: block !important;
+    }
+
+    .our-team-section {
+        display: none !important;
+    }
+
+    .our-team-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-member {
+        opacity: 1;
+        /* Hidden initially for fade-in effect */
+        transform: translateY(20px);
+        /* Positioned lower initially for animation */
+        transition: opacity 1s ease, transform 1s ease;
+        margin-top: 20px;
+    }
+
+    .team-member {
+        width: 100%;
+        /* Full width for the first image */
+    }
+
+    /* First image - full width */
+    .team-member:nth-child(1) {
+        width: 51%;
+    }
+
+    /* Next two images side by side */
+    .team-member:nth-child(2),
+    .team-member:nth-child(3) {
+        width: 50%;
+    }
+
+    /* Next two images side by side */
+    .team-member:nth-child(4),
+    .team-member:nth-child(5) {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .team-member img {
+        width: 100%;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .team-member p,
+    .team-member span {
+        margin-top: 3px;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    .team-member:hover img,
+    .team-member:hover p,
+    .team-member:hover span {
+        transform: scale(1.05);
+        /* Zoom effect on hover */
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* header section */
+
+/* Desktop Header Adjustments */
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* Align items at the top */
+        padding: 20px 40px;
+        /* Adequate spacing for desktop view */
+        background-color: white;
+        /* Ensure consistent background */
+        border-bottom: none;
+        /* Remove the bottom gray line */
+    }
+
+    /* Logo Styling */
+    header .logo img {
+        max-height: 60px;
+        /* Adjust logo size */
+    }
+
+    /* Navigation Menu */
+    nav#main-nav {
+        flex: 1;
+        /* Allow it to occupy available space */
+        display: flex;
+        justify-content: center;
+        /* Center the navigation menu */
+        margin-top: 10px;
+        /* Adjust vertical position */
+    }
+
+    nav#main-nav ul {
+        display: flex;
+        gap: 30px;
+        /* Space between menu items */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav#main-nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+    }
+
+    nav#main-nav ul li a:hover {
+        color: #0ac1e0;
+        /* Add hover effect */
+        font-weight: bold;
+    }
+
+    /* Desktop Language Selector */
+    #desktop-language-selector {
+        flex: 0 0 auto;
+        /* Position on the right */
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 150px;
+        /* Adjust width */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+        /* Align vertically with the menu */
+    }
+}
+
+/* Mobile Header Adjustments */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: white;
+        /* Ensure clean background */
+    }
+
+    /* Logo Styling */
+    header .logo {
+        flex: 0 0 auto;
+        /* Keep the logo on the left */
+    }
+
+    header .logo img {
+        max-height: 50px;
+        /* Resize logo for mobile view */
+    }
+
+    /* Toggle Menu */
+    .hamburger-menu {
+        flex: 0 0 auto;
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #333;
+        /* Dark grey color */
+        text-align: center;
+        /* Center align the toggle menu */
+    }
+
+    /* Language Selector */
+    #mobile-language-selector {
+        flex: 0 0 auto;
+        font-size: 14px;
+        padding: 5px 10px;
+        width: auto;
+        /* Adjust width dynamically */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Mobile Responsive Header Adjustments */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* Space out the items horizontally */
+        align-items: center;
+        /* Align items vertically */
+        padding: 10px 15px;
+        background-color: white;
+    }
+
+    /* Logo on the left */
+    header .logo {
+        flex: 0 0 auto;
+        /* Fix size */
+    }
+
+    header .logo img {
+        max-height: 50px;
+        /* Resize logo for mobile view */
+    }
+
+    /* Center Toggle Menu */
+    .hamburger-menu {
+        flex: 0 0 auto;
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #333;
+        /* Dark grey color */
+    }
+
+    /* Language Selector on the right */
+    #mobile-language-selector {
+        flex: 0 0 auto;
+        font-size: 14px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+/* Mobile Header Adjustments for 320px width */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: white;
+        /* Ensure clean background */
+    }
+
+    /* Logo */
+    header .logo img {
+        max-height: 50px;
+        /* Resize logo for mobile view */
+    }
+
+    /* Hamburger Menu (Center Toggle Menu) */
+    .hamburger-menu {
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #333;
+        /* Dark grey color */
+        margin: 0 auto;
+        /* Center the toggle menu */
+    }
+
+    /* Language Selector */
+    #mobile-language-selector {
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 120px;
+        /* Adjust width for mobile */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+/* Hide Mobile Nav by Default */
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* Show Mobile Nav When Active */
+
+#mobile-nav:not(.d-none) {
+    display: block;
+}
+
+/* Hamburger Menu Styles */
+
+.hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Flex Column for Mobile Nav */
+
+#mobile-nav ul {
+    flex-direction: column;
+    padding: 10px;
+    list-style-type: none;
+}
+
+/*END header section */
